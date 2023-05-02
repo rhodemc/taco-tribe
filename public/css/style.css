@@ -18,3 +18,10 @@
   background-size: cover;
   background-position: center;
 }
+
+
+.space-mono {
+  font-family: 'Bebas Neue', cursive;
+  font-family: 'Space Mono', monospace;
+}
+
