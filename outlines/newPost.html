@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TACO'D - Add Review</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../public/css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 fish">
+    <div class="min-h-screen flex items-center justify-center">
+      <div class="bg-white p-8 rounded-lg shadow-md max-w-md w-full opacity-90">
+        <h2 class="text-2xl font-bold mb-4">Add Review</h2>
+        <form action="add_review.php" method="post">
+          <div class="mb-4">
+            <label for="restaurant-name" class="block font-bold mb-2"
+              >Restaurant Name</label
+            >
+            <input
+              type="text"
+              placeholder="Enter restaurant name"
+              name="restaurant-name"
+              required
+              class="w-full border border-gray-300 p-2 rounded-lg"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="taco-type" class="block font-bold mb-2"
+              >Type of Taco</label
+            >
+            <input
+              type="text"
+              placeholder="Enter type of taco"
+              name="taco-type"
+              required
+              class="w-full border border-gray-300 p-2 rounded-lg"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="rating" class="block font-bold mb-2">Rating</label>
+            <input
+              type="number"
+              placeholder="Enter rating (1-10)"
+              name="rating"
+              min="1"
+              max="10"
+              required
+              class="w-full border border-gray-300 p-2 rounded-lg"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="comments" class="block font-bold mb-2">Comments</label>
+            <textarea
+              placeholder="Enter your comments"
+              name="comments"
+              required
+              class="w-full border border-gray-300 p-2 rounded-lg"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Add Review
+          </button>
+        </form>
+        <div class="mt-4 text-sm text-gray-600">
+          <a href="#" class="text-blue-500">Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
