@@ -1,20 +1,20 @@
 // import models
-const Taco = require('./Taco');
-const TacoShop = require('./TacoShop');
+const User = require('./User');
+const BlogPost = require('./BlogPost');
 
-// Tacos belongsTo TacoShops
+// Tacos belongsTo BlogPost
 // Is foreignkey shop_id?
-Taco.belongsTo(TacoShop, {
-  foreignKey: 'shop_id',
+BlogPost.belongsTo(User, {
+  foreignKey: 'user_id',
 });
 
-// TacoShops have many Tacos
-TacoShop.hasMany(Taco, {
-  foreignKey: 'shop_id',
+// BlogPost have many Tacos
+User.hasMany(BlogPost, {
+  foreignKey: 'user_id',
   onDelete: 'CASCADE',
 });
 
 module.exports = {
-  Taco,
-  TacoShop,
+  User,
+  BlogPost,
 };

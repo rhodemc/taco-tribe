@@ -4,10 +4,10 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 // Initialize Product model (table) by extending off Sequelize's Model class
-class Taco extends Model {}
+class BlogPost extends Model {}
 
 // set up fields and rules for Product model
-Taco.init(
+BlogPost.init(
   {
     // define columns
     id: {
@@ -16,9 +16,28 @@ Taco.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    taco_name: {
+    shop_name: {
       type: DataTypes.STRING,
       allowNull: false,
+    },
+    taco_type: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    shop_rating: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    taco_review: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
     },
   },
   {
@@ -26,8 +45,8 @@ Taco.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'Taco',
+    modelName: 'blogpost',
   }
 );
 
-module.exports = { Taco };
+module.exports =  BlogPost;

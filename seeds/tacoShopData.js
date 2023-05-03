@@ -1,4 +1,4 @@
-const { TacoShop } = require('../models');
+const { BlogPost } = require('../models');
 
 const shopData = [
   {
