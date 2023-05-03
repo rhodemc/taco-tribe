@@ -1,33 +1,41 @@
-<!DOCTYPE html>
 <html>
   <head>
     <title>TACO'D</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/style.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <link rel='stylesheet' href='/css/style.css' />
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@700&display=swap'
+      rel='stylesheet'
+    />
+    <script src='https://cdn.tailwindcss.com'></script>
   </head>
 
-  <body class="jarritos">
-    <nav class="flex justify-end pr-4 mt-8 space-x-4">
+  <body class='jarritos'>
+    <div class='min-h-screen'>
+      <nav class='flex justify-end pr-4 mt-8 space-x-4 fixed w-full'>
         <button
-          type="submit"
-          class="h-12 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          type='submit'
+          class='bg-white text-blue-600 font-bold py-3 px-6 rounded-lg border border-blue-600 hover:bg-blue-600 hover:text-white focus:outline-none focus:shadow-outline-blue'
         >
           Login
         </button>
         <button
-          type="submit"
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          type='submit'
+          class='bg-white text-blue-600 font-bold py-3 px-6 rounded-lg border border-blue-600 hover:bg-blue-600 hover:text-white focus:outline-none focus:shadow-outline-blue'
         >
           Sign Up
         </button>
-    </nav>
-    <div class="grid h-screen place-items-centergrid h-screen place-items-center">
-        <h1 class="space-mono text-center text-[11rem] text-slate-50 hover:text-red-600 drop-shadow-[0_2.2px_1.2px_rgba(0,0,0,0.8)] hover:scale-150 hover:cursor-pointer inline-block transition duration-1000">TACO'D</h1>
+      </nav>
+      <div
+        class='grid h-screen place-items-centergrid h-screen place-items-center'
+      >
+        <h1
+          class='space-mono text-center text-[11rem] text-slate-50 hover:text-red-600 drop-shadow-[0_2.2px_1.2px_rgba(0,0,0,0.8)] hover:scale-150 hover:cursor-pointer inline-block transition duration-1000'
+        >TACO'D</h1>
+      </div>
     </div>
-</body>
+  </body>
 </html>
