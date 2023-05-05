@@ -2,21 +2,26 @@
   <div class='min-h-screen flex items-center justify-center'>
     <div class='bg-white p-8 rounded-lg shadow-md max-w-md w-full opacity-90'>
       <h2 class='text-2xl font-bold mb-4'>Login</h2>
-      <form action='login.php' method='post'>
+      <form class='login-form'>
         <div class='mb-4'>
-          <label for='username' class='block font-bold mb-2'>Username</label>
+          <label for='email-login' class='block font-bold mb-2'>Username</label>
           <input
             type='text'
+            id='email-login'
             placeholder='Enter Username'
-            name='username'
+            name='email'
             required
             class='w-full border border-gray-300 p-2 rounded-lg'
           />
         </div>
         <div class='mb-4'>
-          <label for='password' class='block font-bold mb-2'>Password</label>
+          <label
+            for='password-login'
+            class='block font-bold mb-2'
+          >Password</label>
           <input
             type='password'
+            id='password-login'
             placeholder='Enter Password'
             name='password'
             required
@@ -42,4 +47,4 @@
   </div>
 </body>
 
-<script src='/public/js/login.js'></script>
+<script src='/js/login.js'></script>
