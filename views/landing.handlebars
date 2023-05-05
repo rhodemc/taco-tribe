@@ -1,5 +1,15 @@
 <body class='jarritos'>
   <nav class='flex justify-end pr-4 mt-8 space-x-4'>
+    {{!-- {{#if logged_in}}
+      <a
+        href='/landing'
+        type='submit'
+        class='bg-white text-blue-600 font-bold py-3 px-6 rounded-lg border border-blue-600 hover:bg-blue-600 hover:text-white focus:outline-none focus:shadow-outline-blue'
+      >
+        Logout
+      </a>
+    {{else}} --}}
+
     <a
       href='/login'
       type='submit'
@@ -7,6 +17,7 @@
     >
       Login
     </a>
+    {{!-- {{/if}} --}}
     <a
       href='/signup'
       class='bg-white text-blue-600 font-bold py-3 px-6 rounded-lg border border-blue-600 hover:bg-blue-600 hover:text-white focus:outline-none focus:shadow-outline-blue'
@@ -20,3 +31,6 @@
     >TACO'D</h1>
   </div>
 </body>
+{{!-- {{#if logged_in}}
+  <script src='/js/logout.js'></script>
+{{/if}} --}}
