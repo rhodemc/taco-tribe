@@ -1,6 +1,7 @@
 <body class="brick">
     <div class="min-h-screen py-6 flex flex-col justify-center sm:py-12">
-  
+  {{!-- {{#if newPost.length}} --}}
+  {{#each newPost as |post|}}
       <div class="py-3 sm:max-w-xl sm:mx-auto">
         <div class="bg-white shadow-lg border-gray-100 max-h-80	 border sm:rounded-3xl p-8 flex space-x-8">
           <div class="h-48 overflow-visible w-1/2">
@@ -8,18 +9,20 @@
           </div>
           <div class="flex flex-col w-1/2 space-y-4">
             <div class="flex justify-between items-start">
-              <h2 class="font-mono text-3xl font-bold">Super Torta</h2>
-              <div id="rating" class="bg-amber-300 font-bold rounded-xl p-2">9.3</div>
+              <h2 class="font-mono text-3xl font-bold">{{post.shop_name}}</h2>
+              <div id="rating" class="bg-amber-300 font-bold rounded-xl p-2">{{post.rating}}</div>
             </div>
             <div>
-              <p class=" text-gray-400 max-h-40 overflow-y-hidden">The chicken tacos are amazing.</p>
-            <div class="flex text-2xl font-bold text-a">$2.99</div>
+              <p class=" text-gray-400 max-h-40 overflow-y-hidden">{{post.comments}}</p>
+            <div class="flex text-2xl font-bold text-a">{{post.taco_type}}</div>
           </div>
         </div>
-        
+        {{/each}}
       </div>
       <button id="newPost" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded absolute top-4 left-4"><a href="/newpost">Add Review</a></button>
       <button id="logout" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded absolute top-4 right-4">Logout</button> 
     </div>
+  
+  {{!-- {{/if}} --}}
     <script src="/js/logout.js"></script>
   </body>
