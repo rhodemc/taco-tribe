@@ -25,10 +25,10 @@ BlogPost.init(
       allowNull: false,
     },
     shop_rating: {
-      type: DataTypes.STRING,
-      allowNull: false,
+      type: DataTypes.INTEGER,
+      allowNtull: false,
     },
-    taco_review: {
+    comments: {
       type: DataTypes.STRING,
       allowNull: false,
     },
