@@ -15,15 +15,15 @@ const signupFormHandler = async (event) => {
       headers: { 'Content-Type': 'application/json' },
     });
 
-    if (password === confirmPassword && response.ok) {
-      document.location.replace('dashboard');
-    }
-  } else {
-    alert('Passwords do not match, please try again.');
+    setTimeout(() => {
+      if (response.ok) {
+        document.location.replace('dashboard');
+      } else {
+        alert('Passwords do not match, please try again.');
+      }
+    }, 1000);
   }
 };
-
-
 
 document
   .querySelector('.signup-form')

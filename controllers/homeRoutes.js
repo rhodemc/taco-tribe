@@ -2,25 +2,9 @@ const router = require('express').Router();
 const { BlogPost, User } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', async (req, res) => {
+router.get('/', (req, res) => {
   try {
-    // Get all projects and JOIN with user data
-    // const projectData = await Project.findAll({
-    //   include: [
-    //     {
-    //       model: User,
-    //       attributes: ['name'],
-    //     },
-    //   ],
-    // });
-
-    // // Serialize data so the template can read it
-    // const projects = projectData.map((project) => project.get({ plain: true }));
-
-    // Pass serialized data and session flag into template
-    res.render('landing', {
-      // logged_in: req.session.logged_in
-    });
+    res.render('landing');
   } catch (err) {
     res.status(500).json(err);
   }
@@ -47,6 +31,19 @@ router.get('/', async (req, res) => {
 //     res.status(500).json(err);
 //   }
 // });
+
+// // Get all projects and JOIN with user data
+// const projectData = await Project.findAll({
+//   include: [
+//     {
+//       model: User,
+//       attributes: ['name'],
+//     },
+//   ],
+// });
+
+// // Serialize data so the template can read it
+// const projects = projectData.map((project) => project.get({ plain: true }));
 
 // withAuth middleware added to route
 router.get('/dashboard', withAuth, async (req, res) => {

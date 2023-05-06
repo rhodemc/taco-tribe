@@ -24,7 +24,7 @@ BlogPost.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    shop_rating: {
+    rating: {
       type: DataTypes.INTEGER,
       allowNtull: false,
     },
