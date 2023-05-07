@@ -1,6 +1,8 @@
+// dependencies
 const router = require('express').Router();
 const { User } = require('../../models');
 
+// Route to create a new user
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
@@ -16,6 +18,7 @@ router.post('/', async (req, res) => {
   }
 });
 
+// login route to find user and log them in
 router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
@@ -47,6 +50,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
+// logout route to log user out
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {
