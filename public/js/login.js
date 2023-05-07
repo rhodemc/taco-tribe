@@ -12,13 +12,17 @@ const loginFormHandler = async (event) => {
       headers: { 'Content-Type': 'application/json' },
     });
     console.log(response.status);
-    if (response.ok) {
-      // If successful, redirect the browser to the profile page
-      document.location.replace('/dashboard');
-    } else {
-      // alert(response.statusText);
-      alert('Incorrect email or password, please try again.');
-    }
+
+    // setTimeout allows login before attempting redirect
+    setTimeout(() => {
+      if (response.ok) {
+        // If successful, redirect the browser to the profile page
+        document.location.replace('/dashboard');
+      } else {
+        // alert(response.statusText);
+        alert('Incorrect email or password, please try again.');
+      }
+    }, 1000);
   }
 };
 

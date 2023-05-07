@@ -2,13 +2,12 @@
 const User = require('./User');
 const BlogPost = require('./BlogPost');
 
-// Tacos belongsTo BlogPost
-// Is foreignkey shop_id?
+// User belongsTo BlogPost
 BlogPost.belongsTo(User, {
   foreignKey: 'user_id',
 });
 
-// BlogPost have many Tacos
+// User has many blogposts
 User.hasMany(BlogPost, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE',
